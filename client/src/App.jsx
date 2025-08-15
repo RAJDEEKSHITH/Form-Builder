@@ -5,11 +5,11 @@ import FormEditor from './pages/FormEditor';
 import FormFill from './pages/FormFill';
 import SubmissionSuccess from './pages/SubmissionSuccess';
 import ViewFormResponses from './pages/ViewFormResponses';
+import NotFound from './components/NotFound';
 
 // Set the base URL for Axios requests
 import axios from 'axios';
-axios.defaults.baseURL = import.meta.env.VITE_API_URL; // Development
-
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000'; // Fallback for development
 
 function App() {
     return (
@@ -21,6 +21,7 @@ function App() {
                     <Route path="/form/:formId" element={<FormFill />} />
                     <Route path="/form/:formId/responses" element={<ViewFormResponses />} />
                     <Route path="/success" element={<SubmissionSuccess />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
         </Router>
