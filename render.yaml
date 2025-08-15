@@ -25,7 +25,7 @@ services:
       - key: VITE_API_URL
         fromService:
           type: web
-          name: form-builder-backend # Must match the backend service name above
+          name: Form-Builder # Must match the backend service name above
           property: url
     routes:
       - type: rewrite
