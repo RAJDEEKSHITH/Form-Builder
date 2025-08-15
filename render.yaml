@@ -1,5 +1,5 @@
 services:
-  # Your Backend Service
+  # Backend Service
   - type: web
     name: Form-Builder 
     env: node
@@ -14,8 +14,8 @@ services:
       - key: NODE_VERSION
         value: "18.17.1"
 
-  # Your Frontend Service (Static Site)
-  - type: static_site
+  # Frontend Service (Static Site)
+  - type: static  # changed from static_site to static
     name: Form-Builder-1 
     repo: https://github.com/RAJDEEKSHITH/Form-Builder.git
     rootDir: client
@@ -25,7 +25,7 @@ services:
       - key: VITE_API_URL
         fromService:
           type: web
-          name: Form-Builder # Must match the backend service name above
+          name: Form-Builder        # Must match the backend service name above
           property: url
     routes:
       - type: rewrite
