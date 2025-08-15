@@ -15,7 +15,7 @@ services:
         value: 18.17.1
 
   # Your Frontend Service (Static Site)
-  - type: static site
+  - type: static_site
     name: Form-Builder-1 # Make sure this name matches your frontend service name on Render
     repo: https://github.com/RAJDEEKSHITH/Form-Builder.git # Change this to your repo URL
     rootDir: client
