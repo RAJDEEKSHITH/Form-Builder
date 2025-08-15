@@ -15,12 +15,13 @@ services:
         value: "18.17.1"
 
   # Frontend Service (Static Site)
-  - type: static  # changed from static_site to static
-    name: Form-Builder-1 
+  - type: web
+    name: Form-Builder-Frontend 
+    runtime: static
     repo: https://github.com/RAJDEEKSHITH/Form-Builder.git
     rootDir: client
     buildCommand: npm install && npm run build
-    publishDir: dist
+    staticPublishPath: ./dist
     envVars:
       - key: VITE_API_URL
         fromService:
