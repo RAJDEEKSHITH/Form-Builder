@@ -4,7 +4,7 @@ services:
     name: Form-Builder # Make sure this name matches your backend service name on Render
     env: node
     plan: free
-    repo: https://github.com/RAJDEEKSHITH/Form-Builder.git # Change this to your repo URL
+    repo: https://github.com/RAJDEEKSHITH/Form-Builder.git # Your repo URL
     rootDir: server
     buildCommand: npm install
     startCommand: node server.js
@@ -15,9 +15,9 @@ services:
         value: 18.17.1
 
   # Your Frontend Service (Static Site)
-  - type: static_site
+  - type: static #
     name: Form-Builder-1 # Make sure this name matches your frontend service name on Render
-    repo: https://github.com/RAJDEEKSHITH/Form-Builder.git # Change this to your repo URL
+    repo: https://github.com/RAJDEEKSHITH/Form-Builder.git # Your repo URL
     rootDir: client
     buildCommand: npm install && npm run build
     publishDir: dist
