@@ -32,7 +32,3 @@ services:
           type: web
           name: Form-Builder        # Must match the backend service name above
           property: host
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
