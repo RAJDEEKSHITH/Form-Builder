@@ -12,12 +12,11 @@ services:
       - key: MONGO_URI
         sync: false # Set this in the Render dashboard
       - key: NODE_VERSION
-        value: 18.17.1
+        value: "18.17.1"
 
   # Your Frontend Service (Static Site)
   - type: static_site
     name: Form-Builder-1 
-    env: static # <-- THIS LINE WAS ADDED. It is crucial for Render to identify the service type.
     repo: https://github.com/RAJDEEKSHITH/Form-Builder.git
     rootDir: client
     buildCommand: npm install && npm run build
