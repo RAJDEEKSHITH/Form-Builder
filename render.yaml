@@ -27,7 +27,7 @@ services:
         fromService:
           type: web
           name: Form-Builder        # Must match the backend service name above
-          property: url
+          property: host
     routes:
       - type: rewrite
         source: /*
